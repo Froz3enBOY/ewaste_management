@@ -7,8 +7,7 @@
     <form action="{%url 'delete_cvdata' data.id %}" method="POST" id="bin_form">
         {% csrf_token %}
         <a href="{% url 'home' %}" class="btn btn-danger ">no</a>
-        <input type="submit" value="yes" class="btn btn-info btn-fill pull-right">
-        
+        <input type="submit" value="yes" class="btn btn-info btn-fill pull-right">    
   </form>
   <br>
   {% endblock body %}
