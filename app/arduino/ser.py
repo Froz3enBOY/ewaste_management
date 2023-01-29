@@ -9,8 +9,8 @@ class SonarMonitor():
         self.new_data=0
     # A callback function to display the distance
     async def the_callback(self,data):
-        #print("Distance in cm: ", data[2])
-        self.new_data=int(data[2])
+        print("Distance in cm: ", data[2])
+
         #print( self.new_data )
         
     

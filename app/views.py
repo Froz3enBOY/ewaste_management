@@ -178,7 +178,7 @@ def distance(request):
     sys.stdout = sys.__stdout__
     data = pathlib.Path('app/arduino/new.txt').read_text()
     data = int(data)
-    percent = (data/100)*100
+    percent = 100-(data/58)*100
     if request.method == "POST":
         fm = arduino_status(request.POST)
         if fm.is_valid():
@@ -194,7 +194,7 @@ def fill_update(request,pk):#bin  # sourcery skip: extract-method, move-assign
     form = arduino_status(instance=order)
     data = pathlib.Path('app/arduino/new.txt').read_text()
     data = int(data)
-    percent = (data/80)*100
+    percent = 100-(data/58)*100
     if request.method == "POST":
         fm = arduino_status(request.POST,instance=order)
         if fm.is_valid():
